@@ -51,3 +51,5 @@ appsettings.Development.json
 # OS-specific
 .DS_Store
 Thumbs.db
+
+project.assets.json
