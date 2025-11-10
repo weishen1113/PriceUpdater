@@ -1,0 +1,53 @@
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+out/
+Debug/
+Release/
+
+# Compiled binaries
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.zip
+
+# Entity Framework migrations cache (optional)
+*.db
+*.sqlite
+
+# Rider / VS Code settings (optional)
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+*.swp
+
+# Auto-generated lock and dependency files
+*.nuget.dgspec.json
+project.lock.json
+project.fragment.lock.json
+
+# Dotnet tool artifacts
+*.deps.json
+*.runtimeconfig.json
+
+# Environment / secrets
+appsettings.Development.json
+*.env
+.env.*
+
+# OS-specific
+.DS_Store
+Thumbs.db
