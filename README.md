@@ -27,9 +27,14 @@ It is designed to run as a lightweight background service or scheduled task.
     ALTER TABLE tokens
     ADD COLUMN price DECIMAL(18,2) NULL DEFAULT 0;
     ```
+    
+4. **Restore dependencies**
+   ```bash
+   dotnet restore
+   ```
 
-4. **Run the console app**
-    The process runs every 5 minutes and pulls prices for all tokens:
+5. **Run the console app**
+   - The process runs every 5 minutes and pulls prices for all tokens:
    ```bash
    dotnet run
    ```
@@ -51,4 +56,19 @@ It is designed to run as a lightweight background service or scheduled task.
     11/11/2025 4:36:41 AM: WS ABCD -> USD 0.00
     11/11/2025 4:36:42 AM: DSAFA -> USD 0.00
     11/11/2025 4:36:42 AM: SFGD -> USD 0.00
+    ```
+    - You could also override the fiat currency (example: MYR):
+    ```bash
+   dotnet run -- MYR
+   ```
+   - **Expected output**:
+    ```bash
+    === NSN Price Updater Started ===
+   Using FIAT: MYR
+   Fetching prices every 5 minutes...
+
+   11/11/2025 5:33:54 PM: BTC -> MYR 437,558.00
+   11/11/2025 5:33:54 PM: FGHJ -> MYR 0.00
+   11/11/2025 5:33:55 PM: KDSKG EDIT -> MYR 0.00
+   11/11/2025 5:33:55 PM: DDD -> MYR 0.00
     ```
